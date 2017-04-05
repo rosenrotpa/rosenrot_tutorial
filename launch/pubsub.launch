@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="rosenrot_tutorial" type="publisher" name="extra_publisher"/>
+  <node pkg="rosenrot_tutorial" type="subscriber" name="extra_subscriber" "output=screen"/>
+</launch>
