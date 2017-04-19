@@ -1,27 +1,26 @@
-#include<ros/ros.h>
+#include <ros/ros.h>
 #include<iostream>
 #include<geometry_msgs/Point.h>
 
-int main(int argc, char** argv) {
- ros::init(argc,argv,"publisher");
- ros::NodeHandle nh;
+int main(int argc,char** argv){
+  ros::init(argc, argv,"publisher");
+  ros::NodeHandle nh;
 
- ros::Publisher our_pub =nh.advertise<geometry_msgs::Point>("point", 10);
- ros::Rate rate(1.0);
+  ros::Publisher our_pub = nh.advertise<geometry_msgs::Point>("point", 10);
 
- while (ros::ok()){
- geometry_msgs::Point point;
+  ros::Rate rate(1.0);
 
- point.x=6.0;
- point.y=18.0;
- point.z=-21.5;
+  while (ros::ok()) {
+   geometry_msgs::Point point;
+   point.x = 6.0;
+   point.y = 18.0;
+   point.z = -21.5;
 
-our_pub.publish(point);
+   our_pub.publish(point);
+
+    rate.sleep();
+  }
 
 
-rate.sleep();
- }
-
-
- return 0;
+  return 0;
 }

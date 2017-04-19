@@ -1,13 +1,13 @@
-#include<ros/ros.h>
+#include <ros/ros.h>
 #include<iostream>
-int main(int argc, char** argv) {
 
-ros::init(argc,argv,"hello_world");
-ros::NodeHandle nh;
+int main(int argc,char** argv){
+  ros::init(argc, argv,"hello_world");
+  ros::NodeHandle nh;
 
-std::cout<<"Hello World!"<<std::endl;
+std::cout << "Hello, world" << std::endl;
 
-ros::spin();
+ ros::spin();
 
-return 0;
+  return 0;
 }
